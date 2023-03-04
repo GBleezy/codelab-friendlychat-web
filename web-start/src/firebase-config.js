@@ -8,8 +8,29 @@
  */
 const config = {
   /* TODO: ADD YOUR FIREBASE CONFIGURATION OBJECT HERE */
-};
 
+};
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyASb1zCiY6oFcCsScm3a6-zIRENszQl3Qs",
+    authDomain: "friendlychat-web-start-project.firebaseapp.com",
+    projectId: "friendlychat-web-start-project",
+    storageBucket: "friendlychat-web-start-project.appspot.com",
+    messagingSenderId: "531548662995",
+    appId: "1:531548662995:web:cff93eb6a530d1cf39f826",
+    measurementId: "G-NCECHX368B"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 export function getFirebaseConfig() {
   if (!config || !config.apiKey) {
     throw new Error('No Firebase configuration object provided.' + '\n' +
